@@ -12,6 +12,7 @@
    --backgraundPicture: #f5f4fa;
    --SocPicture: #afb1b8;
    --clientColorLogo: #afb1b8;
+   --ModalButton: #188ce8;
 
    /* Fonts */
 
@@ -260,7 +261,6 @@ li.header__item:last-child {
    border-radius: 4px;
    font-family: inherit;
    padding: 10px 32px;
-   transition: all 0.3s ease-out;
    appearance: none;
    border: none;
    transition: color 250ms, background-color 250ms;
@@ -502,6 +502,8 @@ li.header__item:last-child {
 
 .client__logo {
    fill: var(--clientColorLogo);
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients__list {
@@ -557,7 +559,7 @@ li.header__item:last-child {
 }
 .footer__link {
    font-style: normal;
-   color: rgba(255, 255, 255, 0.6);
+   color: var(--mainWhite);
    font-weight: 400;
    font-size: 14px;
    line-height: 1.7;
@@ -648,8 +650,7 @@ li.footer__item:first-child {
    justify-content: center;
    transition: opacity 250ms, visibility 250ms;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-   background-color:rgba(0, 0, 0, 0.2);
-
+   background-color: rgba(0, 0, 0, 0.2);
 }
 
 .modal {
@@ -679,23 +680,15 @@ li.footer__item:first-child {
 .backdrop__close-icon:focus {
    fill: var(--acentColor);
 }
+.modal__form label {
+   position: relative;
+   display: block;
+}
 
 .input__modal-icon {
-   position: absolute;
-   top: 107px;
-   left: 55px;
-}
-
-.input__modal-icon2 {
-   position: absolute;
-   top: 174px;
-   left: 55px;
-}
-
-.input__modal-icon3 {
-   position: absolute;
-   top: 243px;
-   left: 54px;
+   position: relative;
+   bottom: 29px;
+   left: 15px;
 }
 
 .input__modal {
@@ -705,6 +698,21 @@ li.footer__item:first-child {
    border-radius: 4px;
    padding-left: 42px;
    cursor: pointer;
+   appearance: none;
+   box-shadow: none;
+   outline: none;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input__modal:hover,
+.input__modal:focus {
+   border: 1px solid #2196f3;
+}
+
+.input__modal:hover + .input__modal-icon,
+.input__modal:focus + .input__modal-icon {
+   fill: var(--acentColor);
 }
 
 .modal__titel {
@@ -716,6 +724,56 @@ li.footer__item:first-child {
    margin-bottom: 12px;
 }
 
+.modal__form textarea {
+   font-family: var(--mainFont);
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 1.1;
+   padding: 16px 12px;
+   resize: none;
+   width: 100%;
+   height: 120px;
+   overflow-y: auto;
+   appearance: none;
+   box-shadow: none;
+   outline: none;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal__form textarea:hover,
+.modal__form textarea:focus {
+   border: 1px solid #2196f3;
+}
+
+.modal__form label.wrapper_checkbox {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 20px;
+}
+
+.wrapper_checkbox input[type='checkbox'] {
+   width: 16px;
+   height: 16px;
+}
+
+.input__checkbox-text {
+   color: var(--mainTextColor);
+   font-size: 14px;
+   line-height: 1.7;
+   margin-left: 10px;
+}
+
+.checkbox__text {
+   position: relative;
+   color: var(--acentColor);
+   border-bottom: 1px solid var(--acentColor);
+}
+
+textarea::placeholder {
+   color: rgba(117, 117, 117, 0.5);
+}
+
 .input__modal-text:first-child {
    margin-top: 12px;
 }
@@ -724,14 +782,36 @@ li.footer__item:first-child {
    line-height: 1.1;
    font-size: 12px;
    color: var(--mainTextColor);
+   display: block;
    margin-bottom: 4px;
-   margin-top: 10px;
 }
 
 .is-hidden {
    opacity: 0;
    pointer-events: none;
    visibility: hidden;
+}
+
+.modal__button {
+   width: 200px;
+   height: 50px;
+   background-color: var(--acentColor);
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+   border-radius: 4px;
+   border: none;
+   color: var(--mainWhite);
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 1.6;
+   display: block;
+   margin: 30px auto 0 auto;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__button:hover,
+.modal__button:focus {
+   background-color: var(--ModalButton);
 }
 
 /*portfolio*/
