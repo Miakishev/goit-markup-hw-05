@@ -944,6 +944,9 @@ textarea::placeholder {
    display: block;
    background-color: var(--mainWhite);
    margin: 15px;
+   transition-property: background-color;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .slider__wrap {
@@ -1010,7 +1013,7 @@ textarea::placeholder {
    padding-left: 22px;
    padding-right: 22px;
    border: none;
-   transition-property: color;
+   transition-property: background-color, color, box-shadow;
    transition-duration: 250ms;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
