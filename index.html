@@ -357,10 +357,12 @@
                      Украинки, 26</a>
                </li>
                <li class="footer__item">
-                  <a class="footer__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                  <a class="footer__link" href="mailto:info@devstudio.com"><span
+                        class="footer__link-nav">info@devstudio.com</span> </a>
                </li>
                <li class="footer__item">
-                  <a class="footer__link" href="tel:+380961111111">+38 096 111 11 11</a>
+                  <a class="footer__link" href="tel:+380961111111"><span class="footer__link-nav">+38 096 111 11
+                        11</span></a>
                </li>
             </ul>
          </div>
@@ -398,6 +400,20 @@
                </li>
             </ul>
          </div>
+         <form class="form__join-soc">
+            <label class="footer__modal-text" for="user-email">
+               <p class="footer__tittel-modal">ПОДПИШИТЕСЬ НА РАССЫЛКУ</p>
+               <input type="email" class="footer__modal" name="user-email" autocomplete="off" placeholder="E-mail"
+                  required />
+            </label>
+            <label for="button__soc" class="form__submit">
+               <button type="submit" name="button__soc" class="button__join-soc">Подписаться
+                  <svg class="footer__soc-icon" width="24" height="24">
+                     <use href="./images/icons.svg/symbol-defs.svg#icon-icon-telegram"></use>
+                  </svg>
+               </button>
+            </label>
+         </form>
       </div>
    </footer>
    <div class="backdrop is-hidden" data-modal>
@@ -409,24 +425,23 @@
          <p class="modal__titel">Остфвьте свои данные,мы вам перезвоним</p>
 
          <form class="modal__form">
-            <label class="input__modal-text" for="user-name"><span>Имя</span>
+            <label class="input__modal-text" for="user-name"><span class="modal-text">Имя</span>
                <input type="text" class="input__modal" name="user-name" id="user-name" required />
                <svg class="input__modal-icon" width="12" height="12">
                   <use href="./images/icons.svg/symbol-defs.svg#icon-person-black-18dp-1"></use>
                </svg></label>
-            <label class="input__modal-text" for="user-tel">Телефон
+            <label class="input__modal-text" for="user-tel"><span class="modal-text">Телефон</span>
                <input type="tel" class="input__modal" name="user-tel" id="user-tel" />
                <svg class="input__modal-icon" width="13" height="13">
                   <use href="./images/icons.svg/symbol-defs.svg#icon-phone-black-18dp-1"></use>
                </svg></label>
-            <label class="input__modal-text" for="user-email">Почта
+            <label class="input__modal-text" for="user-email"><span class="modal-text">Почта</span>
                <input type="email" class="input__modal" name="user-email" id="user-email" required />
                <svg class="input__modal-icon" width="15" height="12">
                   <use href="./images/icons.svg/symbol-defs.svg#icon-mail-black"></use>
                </svg></label>
-            <label class="input__modal-text" for="field_textarea">Комментарий
-               <textarea name="field_textarea" id="field_textarea" rows="5"
-                  placeholder="Введите текст"></textarea></label>
+            <label class="input__modal-text" for="field_textarea"><span class="modal-text">Комментарий</span>
+               <textarea name="field_textarea" id="field_textarea" placeholder="Введите текст"></textarea></label>
             <label class="wrapper_checkbox" for="hobby">
                <input type="checkbox" class="form-input" name="hobby" id="hobby">
                <p class="input__checkbox-text">Соглашаюсь с рассылкой и принимаю <span class="checkbox__text">Условия
