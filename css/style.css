@@ -108,21 +108,18 @@ li.button-item:last-child {
    font-weight: 500;
    font-size: 16px;
    line-height: 1.6;
-   transition: all 0.3s ease-out;
-   padding-top: 32px;
-   padding-bottom: 28px;
+   margin-top: 32px;
+   margin-bottom: 28px;
    display: block;
    border-bottom: 4px solid #fff;
-   transition-property: color;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .text.active {
    color: var(--acentColor);
    border-bottom: 4px solid #2196f3;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   padding-bottom: 28px;
+   margin-bottom: 0px;
 }
 
 .text::after:hover,
@@ -209,9 +206,7 @@ li.header__item:last-child {
 .header__contact--elem {
    display: flex;
    color: var(--mainTextColor);
-   transition-property: color;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header__contact--item {
@@ -225,6 +220,7 @@ li.header__item:last-child {
    display: block;
    margin: auto;
    margin-right: 10px;
+   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header__contact--item:last-child {
@@ -265,9 +261,7 @@ li.header__item:last-child {
    padding: 10px 32px;
    appearance: none;
    border: none;
-   transition-property: color, background-color;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-title:hover,
 .button-title:focus {
@@ -413,6 +407,7 @@ li.header__item:last-child {
 
 .our-team__soc {
    fill: var(--SocPicture);
+   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-team__soc-link:hover {
@@ -430,8 +425,7 @@ li.header__item:last-child {
    display: flex;
    justify-content: center;
    align-items: center;
-   transition: color 250ms, background-color 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-team__prof {
@@ -493,9 +487,7 @@ li.header__item:last-child {
    display: flex;
    align-items: center;
    justify-content: center;
-   transition-property: color;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
    border: 1px solid #afb1b8;
    border-radius: 4px;
 }
@@ -506,8 +498,7 @@ li.header__item:last-child {
 
 .client__logo {
    fill: var(--clientColorLogo);
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients__list {
@@ -568,9 +559,7 @@ li.header__item:last-child {
    font-size: 14px;
    line-height: 1.7;
    margin-bottom: 20px;
-   transition-property: color;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer__link:hover,
 .footer__link:focus {
@@ -675,9 +664,7 @@ li.footer__item:first-child {
    align-items: center;
    justify-content: center;
    margin-left: 12px;
-   transition-property: color;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button__join-soc:hover,
@@ -722,10 +709,8 @@ input::placeholder {
    justify-content: center;
    align-items: center;
    background: rgba(255, 255, 255, 0.1);
-   transition: background-color 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .footer__join-soc:hover,
 .footer__join-soc:focus {
    background-color: var(--acentColor);
@@ -784,7 +769,7 @@ input::placeholder {
 .input__modal-icon {
    position: relative;
    bottom: 26px;
-   left: 13px;
+   left: 15px;
 }
 
 .input__modal {
@@ -834,6 +819,8 @@ input::placeholder {
    appearance: none;
    box-shadow: none;
    outline: none;
+   border: 1px solid rgba(33, 33, 33, 0.2);
+   border-radius: 4px;
    transition-property: color;
    transition-duration: 250ms;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -909,7 +896,7 @@ textarea::placeholder {
    line-height: 1.6;
    display: block;
    margin: 30px auto 0 auto;
-   transition-property: color;
+   transition-property: color background-color;
    transition-duration: 250ms;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -944,9 +931,7 @@ textarea::placeholder {
    display: block;
    background-color: var(--mainWhite);
    margin: 15px;
-   transition-property: background-color;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .slider__wrap {
@@ -964,9 +949,7 @@ textarea::placeholder {
    padding: 40px;
    height: 100%;
    transform: translateY(100%);
-   transition-property: color;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .slider-item:hover .slider-text {
