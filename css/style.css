@@ -726,9 +726,9 @@ input::placeholder {
    display: flex;
    align-items: center;
    justify-content: center;
-   transition-property: color;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transform: scale(1);
+   opacity: 1;
    background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -740,9 +740,6 @@ input::placeholder {
    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
    border-radius: 4px;
    padding: 40px;
-   transition-property: color;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal__button-close {
@@ -756,9 +753,11 @@ input::placeholder {
    display: flex;
    align-items: center;
    justify-content: center;
-   transition-property: color;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop__close-icon {
+   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop__close-icon:hover,
@@ -768,8 +767,9 @@ input::placeholder {
 
 .input__modal-icon {
    position: relative;
-   bottom: 26px;
+   bottom: 28px;
    left: 15px;
+   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input__modal {
@@ -782,9 +782,7 @@ input::placeholder {
    appearance: none;
    box-shadow: none;
    outline: none;
-   transition-property: color;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input__modal:hover,
@@ -821,9 +819,7 @@ input::placeholder {
    outline: none;
    border: 1px solid rgba(33, 33, 33, 0.2);
    border-radius: 4px;
-   transition-property: color;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal__form textarea:hover,
 .modal__form textarea:focus {
@@ -837,12 +833,24 @@ input::placeholder {
    margin-top: 20px;
 }
 
+.modal__field {
+   width: 448px;
+   height: 40px;
+   margin-bottom: 10px;
+}
+
 .wrapper_checkbox input[type='checkbox'] {
    width: 16px;
-   height: 16px;
-   transition-property: color;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   height: 15px;
+}
+
+.form-input::before {
+   content: ;
+   width: 16px;
+   height: 15px;
+   border: 2px solid #212121;
+   border-radius: 2px;
+   display: block;
 }
 
 .input__checkbox-text {
@@ -881,6 +889,7 @@ textarea::placeholder {
    opacity: 0;
    pointer-events: none;
    visibility: hidden;
+   transform: scale(0);
 }
 
 .modal__button {
@@ -896,9 +905,7 @@ textarea::placeholder {
    line-height: 1.6;
    display: block;
    margin: 30px auto 0 auto;
-   transition-property: color background-color;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal__button:hover,
